@@ -1,0 +1,32 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "0.0.1",
+    "title" : "Swagger boilerplate api"
+  },
+  "paths" : {
+    "/healthcheck" : {
+      "get" : {
+        "description" : "Attempts to access the service to return a healthcheck",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful response",
+            "schema" : {
+              "$ref" : "#/definitions/Healthcheck"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Healthcheck" : {
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
